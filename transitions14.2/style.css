@@ -1,0 +1,129 @@
+button{
+    all: unset;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    margin: 15%;
+}
+
+#buttonsSection{
+    display: flex;
+    row-gap: 36px;
+    column-gap: 36px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button{
+    border: solid 1px black;
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    height: 82px;
+    width: 312px;
+}
+
+button h3{
+    position: absolute;
+}
+
+#TranslateY::before{
+    content: "Cool!";
+    display: block;
+    transform: translateY(-82px);
+    text-align: center;
+    height: 82px;
+    width: 312px;
+    transition: all 1.2s ease-in;
+    background-color: red;
+    z-index: 1;
+   
+}
+
+#TranslateY:hover::before{
+    transform: translateY(0);
+}
+
+#TranslateX::before{
+    content: "";
+    display: block;
+    transform: translateX(-312px);
+    text-align: center;
+    height: 82px;
+    width: 312px;
+    transition: all 1.2s ease-in;
+    background-color: blue;
+}
+
+#TranslateX:hover::before{
+    transform: translateY(0);
+}
+
+#Rotate{
+    width: 212px;
+}
+
+#Rotate::before{
+    content: "";
+    display: block;
+    transform: translate(-212px,82px) rotate(45deg);
+    text-align: center;
+    height: 82px;
+    width: 212px;
+    transition: all 0.5s ease-in;
+    background-color: yellow;
+}
+
+#Rotate:hover::before{
+    transform: translate(0);
+}
+#Scale{
+    width: 212px;
+}
+
+#Scale::before{
+    content: "scale";
+    display: block;
+    transform:scale(0);
+    text-align: center;
+    height: 82px;
+    width: 212px;
+    transition: all 1.2s ease-out;
+   
+}
+
+#Scale:hover::before{
+    transform: scale(2);
+    background-color: black;
+    color: white;
+}
+
+#Skew{
+    width: 212px;
+}
+
+#Skew::before{
+    content: "Skew";
+    display: block;
+    transform: translate(-212px,82px) skew(745deg);
+    text-align: center;
+    height: 82px;
+    width: 212px;
+    transition: all 1.2s ease-out;
+   
+}
+
+#Skew:hover::before{
+    transform:translate(0);
+    background-color: black;
+    color: white;
+}
+#Skew:hover{
+    transform:skew(-25deg);
+}
