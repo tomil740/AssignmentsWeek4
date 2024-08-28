@@ -1,0 +1,55 @@
+menu li{
+    all: unset;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+menu > li{
+    text-align: center;
+    margin: 12px;
+    font-size: 28px;
+    height: 39px;
+    width: 100px;
+    position: relative;
+    overflow: hidden;
+   
+}
+
+menu > li::before{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 37px;
+    width: 100px;
+    border-top: solid 1px black;
+    transform: translateX(100px);
+    transition: all 0.5s ease-in;  
+}
+menu > li::after{
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100px;
+    border-bottom: solid 1px black;
+    transform: translateX(-100px);
+    transition: all 0.5s ease-in;  
+}
+
+menu > li:hover::before{
+    transform: translate(0);
+}
+menu > li:hover::after{
+    transform: translate(0);
+}
