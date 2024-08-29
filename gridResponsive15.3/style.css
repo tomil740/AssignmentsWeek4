@@ -1,0 +1,65 @@
+
+body{
+    width: 100vw;
+}
+.formsSection{
+    width: 90%;
+    height: 65vh;
+    display: grid;
+    grid-template-areas: 'header header header header'
+    'sideBar theContent theContent sideBar2'
+    'footer footer footer footer';
+    justify-content: center;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:repeat(5,1fr);
+    margin: 5%;
+}
+.formsSection div{
+    padding: 6px;
+    margin: 9px;
+    border-radius: 35px;
+}
+
+#red1{
+    background-color: red;
+    grid-area: header;
+}
+
+#blue2{
+    background-color: blue;
+    grid-area: sideBar;
+}
+
+#green3{
+    background-color: green;
+    grid-area: theContent;
+}
+
+#purple4{
+    grid-area: sideBar2;
+    background-color: purple;
+}
+
+#yellow5{
+    grid-area: footer;
+    background-color: yellow;
+}
+
+@media screen and (max-width: 850px){
+    .formsSection{
+        grid-template-areas: 'header header header header'
+        'sideBar theContent theContent theContent'
+        'sideBar2 sideBar2 sideBar2 sideBar2'
+        'footer footer footer footer';
+    }
+}
+
+@media screen and (max-width: 535px){
+    .formsSection{
+        grid-template-areas: 'header header header header'
+        'sideBar sideBar sideBar sideBar'
+        'theContent theContent theContent theContent'
+        'sideBar2 sideBar2 sideBar2 sideBar2'
+        'footer footer footer footer';
+    }
+}
